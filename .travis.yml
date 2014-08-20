@@ -1,0 +1,15 @@
+language: java
+jdk:
+- oraclejdk7
+install: mvn install -DskipTests=true -q
+script: mvn package
+deploy:
+  provider: releases
+  api_key:
+    secure: GZKSGgxhYw7ddkjmQ+aG4cH+rGBvpj4Yb4wHe0aLcpMDwiAF6lBeval8mDYpyChGizP1ZTTZhkGzBES3m6IzJC/b+IMcqkXMc+FAktZymCkxPSXX2aViAdXWfpMKogrn9oJU1rlF67vupxF/V5rZ+8CeHG/FfhA+GtUjoXZpG0Y=
+  file: target/gitlab-merge-request-jenkins.hpi
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: otamachan/jenkins-gitlab-merge-request-builder-plugin
+    all_branches: true
