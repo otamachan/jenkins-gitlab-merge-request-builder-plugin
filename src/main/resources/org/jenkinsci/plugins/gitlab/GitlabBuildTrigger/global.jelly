@@ -27,6 +27,9 @@
     <f:entry title="${%Default failure message}" field="failureMessage">
       <f:textarea default="Build finished.  Tests FAILED."/>
     </f:entry>
+    <f:entry title="${%Default abort message}" field="abortMessage">
+      <f:textarea default="Build finished.  Tests ABORTED."/>
+    </f:entry>
     <f:entry title="${%Ignore SSL Certificate Errors}" field="ignoreCertificateErrors">
       <f:checkbox />
     </f:entry>
